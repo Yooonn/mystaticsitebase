@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Site Base | Home</title>
+
+        <!-- MAIN CSS -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body id="home">
+   <header class="site-header toggle-nav">
+        <div class="container">
+            <div class="site-identity">
+                <h1><a href="index.html">Site Base</a></h1>
+            </div>
+            <nav class="site-navigation">
+                <div class="menu-button navicon">Menu</div>
+                <ul>
+                        <li><a class="scroll" href="#home">Home</a></li>
+                        <li><a class="scroll" href="#services">Services</a></li>
+                        <li><a class="scroll" href="#about">About</a></li>
+                        <li><a class="scroll" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+   </header>
+
+   <main class="site-main">
+        <section class="hero">
+            <div class="container">
+                <h2>This is a Hero Section</h2>
+                <p>This is a Hero paragraph.Consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis consectetur neque neque et urna.Consectetur adipiscing elit.</p>
+                <a class="button">Button</a> <a class="button alt">Alt Button</a>  
+            </div>
+        </section>
+        <section id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="one-third column">
+                        <img src="img/placeholder_1x1.gif" alt="Placeholder image" />
+                        <h3>Heading 3</h3>
+                        <p>Consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis consectetur neque neque et urna.Consectetur adipiscing elit.</p>
+                        <a class="button">Button</a>
+                    </div>
+                    <div class="one-third column">
+                        <img src="img/placeholder_1x1.gif" alt="Placeholder image" />
+                        <h3>Heading 3</h3>
+                        <p>Consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis consectetur neque neque et urna.Consectetur adipiscing elit.</p>
+                        <a class="button">Button</a>
+                    </div>
+                    <div class="one-third column">
+                        <img src="https://picsum.photos/g/1600/1600" alt="Placeholder image" />
+                        <h3>Heading 3</h3>
+                        <p>Consectetur adipiscing elit. Morbi semper, nunc quis euismod porta, ligula dolor interdum dui, quis consectetur neque neque et urna.Consectetur adipiscing elit.</p>
+                        <a class="button">Button</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+                    <div class="container">
+                            <h2 class="sectionheader">About Us</h2>
+                        <article>
+                                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1> 
+                                <h2>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ultrices augue vitae purus sodales eleifend.</h2>
+    
+                                <p class="date"><time>Date MM/DD/YYYY</time></p>
+                                
+                                 <p>Sed faucibus egestas ultricies. Vivamus enim auctor hendrerit elit. Morbi facilisis tempus orci, sed placerat metus auctor non. Etiam non lacus erat, sit amet porttitor tellus. Curabitur pretium tincidunt tortor in vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi quam eros, bibendum ut id, tristique eget lacus. Ut fermentum ligula vitae est luctus at iaculis nunc placerat.</p>
+                                        
+                                        <p>Maecenas at urna sapien, in lobortis tellus. Morbi eget felis eget tellus dapibus pellentesque. Duis dapibus pulvinar ipsum eu dapibus. Suspendisse potenti. Etiam sollicitudin velit eget nisi vulputate eu semper quam semper. Sed vitae ipsum quam. Nunc sed purus nisl, sit amet luctus nisi. Ut enim massa, sagittis et commodo eget.</p>
+                                        
+                                        <blockquote> Pellentesque rutrum, nunc sit amet adipiscing tempor, erat leo laoreet est, eu rhoncus risus elit quis lectus. Cras nulla tellus, sollicitudin quis commodo eget, commodo vel sapien. </blockquote>
+                                        
+                                        <p>Auctor pretium elit. Nunc enim urna, accumsan sed ullamcorper eu, scelerisque gravida sapien. Phasellus tincidunt nunc elementum turpis ornare sit amet congue diam sodales. Sed interdum neque ut ipsum vestibulum euismod. Nulla nec purus ante. Praesent non diam et leo volutpat dictum in id erat. Donec elementum, leo ac blandit ornare, nunc nunc tincidunt mauris, sed ultricies lorem nibh quis lorem.</p>
+                                    
+                                        
+                                        
+                </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+
+                <div class="row">
+                    <div class="one-half column">
+                        <h3>Contact info</h3>
+                        <address>4303 Diamond Head Road <br /> Honolulu, HI 96814</address><a href="tel:1-808-123-4567">(808)123-4567</a><br /><a href="mailto:email@domain.com">email@domain.com</a>
+                    </div>
+                    <div class="one-half column">
+                        <h3>Get in Touch</h3>
+                        <form>
+                            <label for="name">Name: </label>
+                            <input type="text" id="name" name="name" />
+                            <label for="email">Email: </label>
+                            <input type="text" id="email" name="email" />
+                            <label for="message">Message: </label>
+                            <textarea id="message" name="message"></textarea>                                            <input type="submit" value="submit" />
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+   </main>
+
+   <footer class="site-footer">
+        <div class="container">
+            <nav class="site-navigation">
+                <ul>
+                    <li><a class="scroll" href="#home">Home</a></li>
+                    <li><a class="scroll" href="#services">Services</a></li>
+                    <li><a class="scroll" href="#about">About</a></li>
+                    <li><a class="scroll" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+   </footer>
+
+    <!-- SCROLL JS -->
+    <script src="js/scroll.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

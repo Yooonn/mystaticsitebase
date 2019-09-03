@@ -1,0 +1,574 @@
+/* CSS TABLE OF CONTENTS
+
+# BASE CONTENT
+    # BASE TYPOGRAPHY
+        # HEADINGS
+        # PARAGRAPHS
+        # BLOCKQUOTES
+        # HELPERS
+    # MEDIA
+        # IMAGES
+    # COMPONENTS
+        # BUTTONS
+    # LAYOUT
+        # CONTAINER
+        # MEDIA CONTAINER
+        # GRID
+    # STRUCTURE
+        # HEADER
+        # NAVIGATION
+            #TOGGLE NAV
+        # FOOTER
+        # MAIN SECTIONS
+            # HERO
+    
+    ...
+
+*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 87.5%; /* 1em = 14px */
+    line-height: 1.5em; /* 14px x 1.5 = 21px */
+    color: #222;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+
+/* Traditional Typographic Scale
+    16, 18, 21, 24, 36, 48
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    margin: .5em, 0em;
+}
+
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 3em; /* 48px / 16 = 3em */
+    line-height: 1em;
+}
+
+h2 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 2.25em; /* 36px / 16 = 2.25em */
+    line-height: 1.1em;
+}
+
+h3 {
+    font-size: 1.5em; /* 24px / 16 = 1.5em */
+    line-height: 1.2em;
+}
+
+h4 {
+    font-size: 1.3125em; /* 21px / 16 = 1.3125em */
+    line-height: 1.3em;
+}
+
+h5 {
+    font-size: 1.125em; /* 18px / 16 = 1.125em */
+    line-height: 1.4em;
+}
+
+h6 {
+    font-size: 1em; /* 16px / 16 = 1em */
+    line-height: 1.5em;
+}
+
+/* LINKS */
+a {
+    color: #036;
+    text-decoration: none;
+}
+
+/* PARAGRAPHS */
+p {
+    margin: 0 0 1em 0;
+    max-width: 35em;
+}
+
+/* HELPERS */
+.sectionheader {
+    text-align: center;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.sectionheader::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100px;
+    margin: 1em auto 3em auto;
+    background: #ccc;
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BLOCKQUOTES */
+blockquote {
+    margin: 1.5em 0;
+    padding: 1.5em;
+    border-top: .1em solid #eee;
+    border-bottom: .1em solid #eee;
+}
+
+blockquote cite {
+    display: block;
+    font-size: .875em;
+    opacity: .8;
+}
+
+blockquote cite:before {
+    content: '\2014';
+    margin-right: .5em;
+}
+
+/* HELPERS */
+.text-centered {
+    text-align: center;
+}
+
+.hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+/* COMPONENTS */
+
+/* BUTTONS */
+button {
+    font-size: inherit;
+}
+
+a.button,
+button,
+input[type=submit] {
+    display: inline-block;
+    background: #39c;
+    color: #fff;
+    padding: 1em;
+    border-radius: .9em;
+    border: none;
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+a.button:hover,
+button:hover,
+input[type=submit]:hover {
+    cursor: pointer;
+    background: #069;
+    text-decoration: none;
+}
+
+a.button.alt {
+    background: none;
+    border: 1px solid #39c;
+    color: #39c;
+}
+
+a.button.alt:hover {
+    background: #069;
+    border: 1px solid #069;
+    color: #fff;
+}
+
+/* BASE LAYOUT */
+
+/* MEDIA QUERIES 
+
+    #DEFAULT/#SMALL (Mobile First) 0-767px+
+    #MEDIUM: min-with: 768PX+
+    #LARGE: min-with: 1050PX+
+    #EXTRALARGE: min-with: 1250PX+
+
+*/
+
+* {box-sizing: border-box;}
+
+/* SMALL+ (MOBILE FIRST) */
+body {
+    font-size: 87.5%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    padding: 0 4%;
+}
+
+body.demo:before {
+    content: 'Small (0-767px)';
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: red;
+    text-align: center;
+    color: #fff;
+}
+
+/* MEDIUM+ (TABLET) */
+@media (min-width: 768px) {
+
+    /* Inherit Small/Mobile CSS from Above */
+    body {
+    }
+
+    body.demo:before {
+        content: 'Medium (768px-1049px)';
+        background: #bcb83d;
+    }
+
+}
+
+/* LARGE+ (NOTEBOOK) */
+@media (min-width: 1050px) {
+
+    /* Inherit Medium/Tablet CSS from Above */
+    body {
+        font-size: 100%;
+    }
+
+    .container {
+        width: 900px;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
+    body.demo:before {
+        content: 'Large (1050px-1249px)';
+        background: #669933;
+    }
+}
+
+/* EXTRALARGE+ (DESKTOP) */
+@media (min-width: 1250px) {
+
+    /* Inherit Large/Notebook CSS from Above */
+    body {
+        font-size: 112.5%;
+    }
+
+    .container {
+        width: 1100px;
+    }
+
+    body.demo:after {
+        content: 'ExtraLarge (1250px+)';
+        background: #0099cc;
+    }
+}
+
+/* GRID */
+/* Default Grid (on SMALL+ Screen Sizes) */
+
+
+
+
+.row .column {
+    margin-bottom: 2%;
+}
+
+
+.row .column .one-half {
+
+}
+
+/* Medium Grid (on MEDIUM+ Screen Sizes) */
+@media (min-width: 768px) {
+
+    .row {
+        display: flex;
+        justify-content: center;
+        margin-left: -1%;
+        margin-right: -1%;
+    }
+
+    .row .column {
+        flex-grow: 1;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .column.centered {
+        flex-grow: 0;
+    }
+
+    .one-whole.column { width: 100%; }
+    .one-half.column { width: 48%; }
+    .one-third.column { width: 31.3333% }
+    .two-thirds.column { width: 64.6666% }
+    .one-forth.column { width: 23% }
+
+}
+
+/* FOR DEMO PURPOSE ONLY */
+
+.demo .column {
+    background: rgba(0,0,0,0.1);
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+.demo .column p {
+    padding: 0 .5em;
+    margin-bottom: 0;
+}
+
+/* SITE STRUCTURE */
+
+.container {
+
+}
+
+.site-header {
+    padding-top: .5em;
+    /* position: fixed;
+    background: white; */
+}
+
+@media (min-width: 768px) {
+    .site-header .container {    
+    display: flex;
+    justify-content: space-between;
+    }
+}
+
+.site-header, .site-footer {
+    text-align: center;
+}
+
+.site-header a, .site-footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.site-identity {
+ 
+}
+
+.site-identity h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.site-identity h1 a {
+    display: inline-block;
+    padding: .6em 0;
+}
+
+/* SITE NAVIGATION */
+
+.site-navigation{
+
+}
+
+.site-navigation ul {
+    margin: 0;
+    padding: 0;
+}
+
+.site-navigation ul li {
+    display: inline-block;
+
+}
+
+.site-navigation ul li a {
+    display: block;
+    padding: 1em 1.5em;
+    transition: all .4s ease;
+}
+
+@media (max-width:767px) {
+    .site-navigation ul li a:hover {
+        background: #003;
+        color: #fff;
+    }
+}
+
+/* MENU BUITTON */
+
+.menu-button {
+    position: absolute;
+    top: 1.5em;
+    right: 4%;
+    display: flex;
+    /* float: right; */
+}
+
+
+@media (min-width: 768px) {
+    .menu-button {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+}
+
+/* NAVICON */
+
+.navicon {
+    cursor: default;
+    color: rgba(255,255,255,0);
+}
+
+.navicon::selection {
+    background: rgba(255,255,255,0);
+}
+
+.navicon::after {
+    cursor: pointer;
+    content: "\2630";
+    font-size: 1.5em;
+    color: rgba(0,0,0,1);
+    display: block;
+    margin-left: .5em;
+}
+
+
+.expanded .navicon::after {
+    content: "\2715";
+    transform: rotate(90deg);
+    transition: all .4s ease-out;
+}
+
+
+/* TOGGLE NAV */
+
+@media (max-width: 768px) {
+
+    .site-header.toggle-nav {
+        text-align: left;
+    }
+
+    .toggle-nav .site-navigation ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .toggle-nav .site-navigation ul {
+        display: none;
+    }
+
+    .toggle-nav .site-navigation.expanded ul {
+        display: block;
+    }
+}
+
+/* MAIN SECTION */
+
+.site-main {
+
+}
+
+.site-footer {
+    text-align: center;
+}
+
+section {
+    padding: 3em 0;
+}
+
+.hero {
+    text-align: center;
+    background: #ddd;
+    background-image: url(https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1990&q=80);
+    background-size: cover;
+    padding: 6em 1em;
+    margin-top: 1em;
+}
+
+/* https://images.unsplash.com/photo-1520178606913-118a6b3c31b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80 */
+
+.hero h2 {
+    font-size: 3em;
+}    
+
+.hero p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SUB PAGES */
+
+article {
+    max-width: 36em;
+    margin: 0 auto;
+}
+
+article h1 {
+    text-align: center;
+}
+
+article h2 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.date {
+    font-size: .8em;
+    color: #aaa;
+    text-align: center;
+    margin: 1em auto;
+}
+
+article p + h3 {
+    margin-top: 1.5em;
+}
+
+blockquote {
+    margin: 2em 0;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    font-style: italic;
+    border-left: 5px solid #ddd;
+    padding: 1em;
+}
+
+/* FORMS */
+
+form {
+    max-width: 600px;
+}
+
+label, input, textarea {
+    display: block;
+    width: 100%;
+}
+
+input[type=text], textarea {
+    border: 1px solid #ccc;
+    padding: 1em;
+    font-size: 1em;
+    background: #eee;
+    color: #444
+}
+
+textarea {
+    min-height: 150px;
+}
+
+input[type=submit] {
+    margin-top: 1em;
+    width: auto;
+    font-size: inherit;
+}
+
+/* CUSTOM STYLING */
+#contact form {
+    margin: 0 auto;
+}
+
