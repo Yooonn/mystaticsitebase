@@ -1,4 +1,4 @@
 # mystaticsitebase
 This is site base project. 
 
-[View Demo](https://yooonn.github.io/mystaticsitebase/) 
+[View Demo](http://yoonnaso.com/artclass/art128/base-site_singlepage/index.html) 
